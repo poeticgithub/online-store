@@ -1,8 +1,10 @@
 # ignore a single file
 db.js
+zamoras/db.js
 
 # Logs
 logs
+
 *.log
 npm-debug.log*
 
