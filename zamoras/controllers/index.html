@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zamora's</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  		crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src = "javascript\index.js"></script>
+    <script type="text/javascript" src = "../app.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css\index.css">
+	<link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">	
+</head>
+<body id = "homepage">
+
+
+<nav class="navbar navbar-default">
+<div class="container">
+	<ul class="nav navbar-nav navbar-right">
+		<li class = "startShopping"><a href="/shoppingpage"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Start Shopping</a></li>
+		<li class = "login"><a href="#" ><span class="glyphicon glyphicon-user login" aria-hidden="true"></span>Login</a></li>
+		<li class = "signUp"><a href="#"><span class="glyphicon glyphicon-user signUp" aria-hidden="true"></span>Signup</a></li>
+	</ul>
+</div>
+</nav>
+
+<div class="logo">
+<figure>
+	<p class="logoName">Zamora's</p>
+	<figcaption>Retail and Clothing</figcaption>
+</figure>
+</div>
+
+
+
+<!-- Modal for login start-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Login to your Zamora's Account!</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputUsername">Username</label>
+            <input type="text" class="form-control" id="inputUsername" name="Username" placeholder="Username">
+
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password"><p></p>
+
+            <input type="submit" class="btn btn-success btn-block form-control" id="submitbtn" name="submit">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p>Dont have an account? <button class="btn btn-primary signUp">Sign Up!</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for login end -->
+
+
+<!-- Modal for SignUp -->
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Sign Up for an AWESOME Zamora's Account!<h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputFullName">Your Name</label>
+            <input type="text" class="form-control" name="fullName" placeholder="Full Name" id="inputFullName">
+
+            <label for="newUsername">Username</label>
+            <input type="text" class="form-control" id="newUsername" name="newUsername" placeholder="Username">
+
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password"><p></p>
+            
+            <input type="submit" class="btn btn-success btn-block form-control" name="submit">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p>Already have an acccount? <button class="btn btn-primary login">Login!</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Modal for signup -->
+
+
+</body>
+</html>

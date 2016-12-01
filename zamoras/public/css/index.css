@@ -1,0 +1,183 @@
+#homepage {
+	background: url('/images/shoes_belt.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+ 	background-size: cover;
+}
+
+
+.navbar {
+	background-color: transparent;
+	border:none;
+	float:right;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color:white;
+	font-size: 1.1em;
+}
+
+.logo {
+	bottom:0px;
+	position:fixed;
+	font-family: 'Ranga', cursive;
+	color:white;
+	margin-left: 70px;
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 0;
+	line-height: .7;
+}
+
+.logoName {
+	font-size:4.3em;
+	margin:0;
+}
+
+.modal-header {
+	text-align: center;
+}
+
+figcaption {
+	font-size: 1.1em;
+	float:right;
+}
+
+#shoppingpage {
+/*	border:10px solid #bdc3c7;*/
+	margin: 20px auto;
+	max-width: 900px;
+	width:80%;
+	font-family: 'Ranga', cursive;
+	height:700px;
+
+
+
+background: #2BC0E4; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2BC0E4 , #EAECC6); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2BC0E4 , #EAECC6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+}
+
+
+
+.topBar {
+	width:auto;
+	font-size: 20px;
+	background-color: black;
+	height:40px;
+	color:white;
+	padding-top:2px;
+}
+
+.topBar > ul {
+	list-style-type: none;
+}
+
+.topBar > ul > li {
+	float:left;
+/*	display: inline;*/
+	padding-left: 50px;
+}
+
+.topBar > ul > li:first-child {
+	padding-left:3px;
+}
+
+.topBar > ul > li:last-child {
+	float:right;
+}
+
+.filter {
+	height:25px;
+	display:block;
+}
+
+.filter > ul {
+	list-style-type: none;
+}
+
+.filter > ul > li {
+	float:left;
+	padding-left:5px;
+	padding-right: 5px;
+}
+
+img:hover {
+	opacity:0.5;
+}
+
+.greatDeals > img {
+ 	position: relative; 
+   	width: 100%; /* for IE 6 */
+}
+
+
+.greatDeals > h1 { 
+	position:absolute;
+   top: 200px; 
+   left: 0; 
+   width: 100%;
+   text-align: center; 
+}
+
+.greatDeals > h1 > span { 
+   color: white; 
+   font: bold 30px/50px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+
+.navbar {
+	background-color: transparent;
+	border:none;
+	float:right;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:white;
+	font-size: 1.1em;
+}
+
+.logo {
+	bottom:0px;
+	position:fixed;
+	font-family: 'Ranga', cursive;
+	color:white;
+	margin-left: 70px;
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 0;
+	line-height: .7;
+}
+
+.logoName {
+	font-size:4.3em;
+	margin:0;
+}
+
+.modal-header {
+	text-align: center;
+}
+
+.input[type='text'] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    color:black;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type='text']:focus {
+    width: 100%;
+}
+
+figcaption {
+	font-size: 1.1em;
+	float:right;
+}
