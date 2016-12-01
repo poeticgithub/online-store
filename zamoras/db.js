@@ -1,17 +1,38 @@
 var mysql = require('mysql');
+
 var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'zamora23',
-    database : 'zamoras'
-});
+			    host     : 'localhost',
+			    user     : 'root',
+			    password : 'zamora23',
+			    database : 'zamoras'
+			});
 
-connection.connect(function(err) {
-    if (err) throw err;
-});
+module.exports = 
+{
 
-connection.query('Select * from customer', function(err, rows, fields){
-	console.log(rows);
-})
+	connectToDB: function()
+	{
 
-module.exports = connection;
+
+			
+
+		connection.connect(function(err) 
+			{
+   				 if (err) throw err;
+			});
+
+	},
+
+	newQuery: function(statement)
+	{
+		connection.query(statement, function(err, rows, fields){
+			console.log(rows);
+		});
+	}
+};
+
+// connection.query('Select * from customer', function(err, rows, fields){
+// 	console.log(rows);
+// })
+
+//module.exports = connection;

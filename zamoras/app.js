@@ -3,7 +3,7 @@ const app = express();
 var mysql = require('mysql');
 const http = require('http');
 var path = require('path');
-var db = require('./db')
+var db = require('./db.js');
 
 app.use(require('./controllers'));
 
@@ -17,6 +17,14 @@ var server = app.listen (3000, function (){
     var port = server.address().port;
     console.log('Example app listening at http://%s:%s', host, port);
 });
+
+
+db.connectToDB();
+
+db.newQuery('Select username from customer');
+
+// connection.query('select username from customer', function (err, rows, fields){
+//  	console.log(rows)});
 
 // var connection = mysql.createConnection({
 //     host: 'localhost',
