@@ -1,5 +1,12 @@
+var db = require('../db.js');
+
 $(document).ready(function()
 {
+
+    $('.startShopping').click(function(){
+
+
+});
 
 
 	 $('.login').click(function(){
