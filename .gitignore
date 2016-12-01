@@ -1,4 +1,5 @@
 # ignore a single file
+zamoras/db.js
 db.js
 
 # Logs

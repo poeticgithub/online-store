@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'zamora23',
+    password : 't430',
     database : 'zamoras'
 });
 
@@ -11,7 +11,7 @@ connection.connect(function(err) {
 });
 
 connection.query('Select * from customer', function(err, rows, fields){
-	console.log(rows);
+	console.log(rows[0].username);
 })
 
 module.exports = connection;
