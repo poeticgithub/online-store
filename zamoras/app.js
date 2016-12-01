@@ -18,7 +18,7 @@ var server = app.listen (3000, function (){
     console.log('Example app listening at http://%s:%s', host, port);
 });
 
-// var connection = mysql.createConnection({
+// ar connection = mysql.createConnection({
 //     host: 'localhost',
 //     user: 'root',
 //     password: 'zamora23',
