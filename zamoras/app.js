@@ -4,12 +4,13 @@ var mysql = require('mysql');
 const http = require('http');
 var path = require('path');
 var db = require('./db.js');
-
 app.use(require('./controllers'));
 
 app.use(express.static(__dirname + '/public'));
 app.use('/img',express.static(path.join(__dirname, 'public/images')));
 app.use('/css',express.static(path.join(__dirname, 'public/css')));
+app.use('/javascript',express.static(path.join(__dirname, 'public/javascript')));
+
 
 var server = app.listen (3000, function (){
 
@@ -21,7 +22,7 @@ var server = app.listen (3000, function (){
 
 db.connectToDB();
 
-db.newQuery('Select username from customer');
+db.newQuery('Select * from customer');
 
 // connection.query('select username from customer', function (err, rows, fields){
 //  	console.log(rows)});
