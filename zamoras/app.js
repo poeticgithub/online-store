@@ -1,18 +1,31 @@
+const bodyParser = require('body-parser');
 const express = require('express');
-const app = express();
+const exphbs = require('express-handlebars');
 var mysql = require('mysql');
 const http = require('http');
 var path = require('path');
 var db = require('./db.js');
-app.use(require('./controllers'));
+const app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(require('./controllers'));
 app.use(express.static(__dirname + '/public'));
 app.use('/img',express.static(path.join(__dirname, 'public/images')));
 app.use('/css',express.static(path.join(__dirname, 'public/css')));
 app.use('/javascript',express.static(path.join(__dirname, 'public/javascript')));
 
 
-var server = app.listen (3000, function (){
+app.engine('handlebars', exphbs({
+  layoutsDir: './views/layouts',
+  defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
+app.set('views', `${__dirname}/views/`);
+
+
+
+var server = app.listen(3000, function (){
 
     var host = server.address().address;
     var port = server.address().port;
@@ -23,24 +36,3 @@ var server = app.listen (3000, function (){
 db.connectToDB();
 
 db.newQuery('Select * from customer');
-
-// connection.query('select username from customer', function (err, rows, fields){
-//  	console.log(rows)});
-
-// var connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'zamora23',
-//     database: 'zamoras'
-// });
-
-// connection.connect();
-
-
-// connection.query('select username from customer', function (err, rows, fields){
-// 	console.log(rows);
-
-//     if (err) throw err;
-// });
-
-//connection.end();

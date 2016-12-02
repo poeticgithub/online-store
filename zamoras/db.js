@@ -9,13 +9,9 @@ var connection = mysql.createConnection({
 
 module.exports = 
 {
-
-	connectToDB: function()
+    connectToDB: function()
 	{
-
-
-			
-
+		
 		connection.connect(function(err) 
 			{
    				 if (err) throw err;
@@ -30,9 +26,3 @@ module.exports =
 		});
 	}
 };
-
-// connection.query('Select * from customer', function(err, rows, fields){
-// 	console.log(rows);
-// })
-
-//module.exports = connection;
