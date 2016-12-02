@@ -1,26 +1,22 @@
 var express = require('express');
-var router = express.Router();
+const router = express.Router();
 var path = require('path');
-// var temp = require("app").temp;
-
+router.use('/login', require('./login'));
+router.use('/shoppingpage', require('./shoppingpage'));
+router.use('/signup', require('./signup'));
 
 
 
 // define the homepage route
 router.get('/', function(req, res) {
-  return res.sendFile(path.join(__dirname , 'index.html'));
-  });
+  return res.render('homepage');
+ });
 
 
-
-router.post('/', function(req, res){
-	console.log(req.body);
-})
-
-//define specific page in website
-router.get('/shoppingpage', function(req, res) {
- res.sendFile(path.join(__dirname, 'shoppingpage.html'));
-});
+// process a submitted form
+router.post('/', function(req, res) {
+     console.log(req.body.Username);
+ });
 
 
 module.exports = router;

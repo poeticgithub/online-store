@@ -12,16 +12,4 @@ $(document).ready(function()
    		$('#loginModal').modal('hide');
    });
 
-
-   $('#submitbtn').click(function(){
-
- 	   var input = $.trim($('#inputUsername').val());
- 	   check(input);
-
-   		if(input == temp)
-   			console.log('hello world');
-   		else
-   			console.log('not hello world');
-   });
-
 });
