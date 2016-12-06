@@ -4,6 +4,7 @@ var path = require('path');
 router.use('/login', require('./login'));
 router.use('/shoppingpage', require('./shoppingpage'));
 router.use('/signup', require('./signup'));
+router.use('/shoppingcart', require('./shoppingcart'))
 
 
 
