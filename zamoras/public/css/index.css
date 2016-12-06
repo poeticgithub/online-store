@@ -1,3 +1,4 @@
+
 #homepage {
 	background: url('/images/shoes_belt.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -33,6 +34,39 @@ background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, F
         
         
         
+}
+
+#loginSignupPage {
+	height: 100%;
+ 	background-repeat: no-repeat;
+ 	background-color: #d3d3d3;
+ 	font-family: 'Oxygen', sans-serif;
+}
+
+#loginSignupPage h1 > a {
+	text-decoration: none;
+	color:inherit;
+}
+
+#loginSignupPage hr{
+	width: 15%;
+	color: #fff;
+}
+
+#loginSignupPage label{
+	margin-bottom: 10px;
+}
+
+#loginSignupPage input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+#loginSignupPage  h1.title { 
+	font-size: 80px;
+	font-family: 'Ranga', cursive;
+	font-weight: 400; 
 }
 
 
@@ -241,4 +275,46 @@ hr.style-eight:after {
     font-size: 1.5em;
     padding: 0 0.25em;
     background: white;
+}
+
+
+.main{
+ 	margin-top: 70px;
+}
+
+
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+
+
+.main-loginSignup{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 330px;
+    padding: 40px 40px;
+
+}
+
+.loginSignup-button{
+	margin-top: 5px;
+}
+
+.loginSignup-register{
+	font-size: 11px;
+	text-align: center;
 }
