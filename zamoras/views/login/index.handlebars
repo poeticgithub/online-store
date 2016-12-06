@@ -54,14 +54,14 @@
                   </div>
               </div> 
         <div class="main-loginSignup main-center">
-          <form class="form-horizontal" method="post" action="#">
+          <form name = "login" class="form-horizontal" method="post" action="/login">
             
             <div class="form-group">
-              <label for="name" class="cols-sm-2 control-label">Username</label>
+              <label for="username" class="cols-sm-2 control-label">Username</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="name" id="name"  placeholder="Username"/>
+                  <input type="text" class="form-control" name="username" id="username"  placeholder="Username"/>
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@
             </div>
 
             <div class="form-group ">
-              <button type="button" class="btn btn-primary btn-lg btn-block loginSignup-button">Login</button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block loginSignup-button">Login</button>
             </div>
             <div class="loginSignup-register">
                     <p>Not a member? <a href="/signup"> Signup</a>

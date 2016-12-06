@@ -16,22 +16,27 @@ router.post('/', function(req,res) {
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 't430',
+    password: 'root',
     database: 'zamoras'
 });
 
 connection.connect();
 console.log(req.body);
- connection.query('Select * from customer', function (err, rows, fields){
-	 for (var i in rows) {
-            if  (req.body.username == rows[i].username){
-            	console.log('CONGRATULATIONS. YOU HAVE SUCCESSFULLY LOGGED IN');
-            }
-            else {
-                res.render('login');
-                console.log('Incorrect username or password');
-            }  
-     }
+var statement = 'Select * from customer where username = \'' + req.body.username + '\' and password = \'' + req.body.password + '\'' ;
+console.log(statement);
+
+connection.query(statement, function (err, rows, fields){
+	 
+   console.log(rows);
+   if(rows[0] != undefined)
+   {
+      res.redirect('/shoppingpage');
+   }
+
+   else
+   {
+      //something eventually 
+   }
   connection.end();
  });
 
