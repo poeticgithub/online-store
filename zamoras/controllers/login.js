@@ -16,7 +16,7 @@ router.post('/', function(req,res) {
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: 'zamora23',
     database: 'zamoras'
 });
 
