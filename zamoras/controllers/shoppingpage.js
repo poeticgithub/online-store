@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var mysql = require('mysql');
+var name, price, pic;
 
 
 
@@ -9,6 +10,7 @@ var mysql = require('mysql');
 router.get('/', function (req,res) {
   res.render('shoppingpage');
 });
+
 
 
 //process a submitted search form
@@ -23,19 +25,28 @@ var connection = mysql.createConnection({
 
 connection.connect();
 console.log(req.body.search);
- connection.query('Select * from inventory', function (err, rows, fields){
-	 for (var i in rows) {
-            if  (req.body.search == rows[i].ProductName){
-            	console.log('succcessfully found what you are looking for');
-            }
-            else {
-                res.render('shoppingpage');
-                console.log('we do not have what youre looking for');
-            }  
-     }
-  connection.end();
- });
+var statement = 'Select * from inventory where ProductName = \'' + req.body.search + '\'' ;
+ connection.query(statement, function (err, rows, fields){
+      console.log(rows);
+       for (var i in rows) { 
+          if(rows[i] != undefined){      
+              name = rows[i].ProductName;
+              price = rows[i].Cost;
+              pic = rows[i].ProductPicture;
+              //console.log(name);
+              res.render('results', {name, price, pic});            	
+          }
+        }
 
+          
+        if (rows[i] == undefined) {
+              res.render('shoppingpage');
+              console.log('we do not have what you are looking for');
+        }
+       
+  connection.end();
+  });
+ 
 });
 
 module.exports = router;
