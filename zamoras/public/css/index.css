@@ -7,21 +7,82 @@
  	background-size: cover;
 }
 
+#homepage .navbar {
+	background-color: transparent;
+	border:none;
+/*	float:right;*/
+}
+
+#homepage .navbar-default .navbar-nav>li>a {
+	color:white;
+	font-size: 1.1em;
+}
+
 #shoppingpage {
-	border:10px solid #bdc3c7;
+/*	max-width: 900px;*/
+	/*font-family: 'Ranga', cursive;*/
+	width:100%;
+	height:100%; 
+	overflow-y: hidden; 
+
+
+
+
+background: #ECE9E6; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+}
+
+#shoppingpage .shoppingcartText {
+	text-align: center;
+	font-size: 15px;
+}
+
+#shoppingpage .centerdiv{
+	border: 1px solid #ddd;
+	box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
+	margin: 20px auto;
+	overflow-y: scroll;
+	height: 700px;
+	max-width: 900px;
+}
+
+#shoppingpage .navbar{
+	width:100%;
+	background-color: rgb(228,228,228);
+	border-color: transparent;
 	margin: 20px auto;
 	max-width: 900px;
-	width:80%;
-	font-family: 'Ranga', cursive;
-	height:700px;
+}
 
+#shoppingpage .navbar a {
+	color:black;
+}
 
+#shoppingpage .navbar form {
+	padding:7px;
+}
 
-background: #2BC0E4; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #2BC0E4 , #EAECC6); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #2BC0E4 , #EAECC6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
-        
+#shoppingpage .dropdown-menu {
+		background-color: rgb(228,228,228);
+}
+
+#shoppingpage .dropdown-menu .dropdown-item {
+	float:left;
+	display:inline;
+	width:100%;
+	padding:10px;
+}
+
+#shoppingpage .menuText {
+	padding-left: 5px;
+}
+
+#shoppingpage .items {
+	padding-top:20px;
+	width:auto;
 }
 
 #shoppingCartPage {
@@ -69,16 +130,17 @@ input::-webkit-input-placeholder {
 	font-weight: 400; 
 }
 
-
-.navbar {
-	background-color: transparent;
-	border:none;
-	float:right;
+#loginSignupPage .fa {
+	font-size: 20px;
 }
 
-.navbar-default .navbar-nav>li>a {
-	color:white;
-	font-size: 1.1em;
+#loginSignupPage .fa-lock {
+	font-size: 27px;
+	position: all;
+}
+
+.image-text {
+	bottom:0;
 }
 
 .logo {
@@ -107,35 +169,6 @@ figcaption {
 	float:right;
 }
 
-
-
-.topBar {
-	width:auto;
-	font-size: 20px;
-	background-color: black;
-	height:40px;
-	color:white;
-	padding-top:2px;
-}
-
-.topBar > ul {
-	list-style-type: none;
-}
-
-.topBar > ul > li {
-	float:left;
-/*	display: inline;*/
-	padding-left: 50px;
-}
-
-.topBar > ul > li:first-child {
-	padding-left:3px;
-}
-
-.topBar > ul > li:last-child {
-	float:right;
-}
-
 .filter {
 	height:25px;
 	display:block;
@@ -157,6 +190,11 @@ img:hover {
 
 .greatDeals > a > img {
 	width:100%;
+	height:1000px;
+}
+
+.float-right {
+	float:right;
 }
 
 
