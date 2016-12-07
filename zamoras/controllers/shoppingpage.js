@@ -24,7 +24,7 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
-console.log(req.body.search);
+console.log('You searched for: ' + req.body.search);
 var statement = 'Select * from inventory where ProductName = \'' + req.body.search + '\'' ;
  connection.query(statement, function (err, rows, fields){
       console.log(rows);
