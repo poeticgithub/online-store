@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var mysql = require('mysql');
+var db = require('../db');
 
 
 // define the login route
@@ -22,6 +23,7 @@ var connection = mysql.createConnection({
 
 connection.connect();
 console.log(req.body);
+
 var statement = 'Select * from customer where username = \'' + req.body.username + '\' and password = \'' + req.body.password + '\'' ;
 console.log(statement);
 
@@ -30,6 +32,8 @@ connection.query(statement, function (err, rows, fields){
    console.log(rows);
    if(rows[0] != undefined)
    {
+      db.setSession(rows[0].Customer_id);
+      //console.log(rows[0].Customer_id);
       res.redirect('/shoppingpage');
    }
 

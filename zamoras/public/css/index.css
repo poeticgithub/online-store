@@ -7,6 +7,7 @@
  	background-size: cover;
 }
 
+
 #homepage .navbar {
 	background-color: transparent;
 	border:none;
@@ -83,6 +84,11 @@ background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, F
 #shoppingpage .items {
 	padding-top:20px;
 	width:auto;
+}
+
+#shoppingpage .img-responsive{
+	height:150px;
+	width: 150px;
 }
 
 #shoppingCartPage {

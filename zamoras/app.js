@@ -35,4 +35,4 @@ var server = app.listen(3000, function (){
 
 db.connectToDB();
 
-db.newQuery('Select * from customer');
+db.newQuery('Select * from customer where Customer_id = 1');

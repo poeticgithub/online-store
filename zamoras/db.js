@@ -7,6 +7,8 @@ var connection = mysql.createConnection({
 			    database : 'zamoras'
 			});
 
+var sessionUser;
+
 module.exports = 
 {
     connectToDB: function()
@@ -24,5 +26,20 @@ module.exports =
 		connection.query(statement, function(err, rows, fields){
 			console.log(rows);
 		});
+	},
+
+	setSession: function(customerID)
+	{
+		sessionUser = customerID;
+	},
+
+	getSession: function()
+	{
+		return sessionUser;
+	}, 
+
+	isSessioned: function()
+	{
+		return true;
 	}
 };
