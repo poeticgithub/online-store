@@ -1,0 +1,63 @@
+ <body id="loginSignupPage">
+
+<div class="container">
+      <div class="row main">
+        <div class="panel-heading">
+                 <div class="panel-title text-center">
+                    <h1 class="title"><a href="/">Zamora's</a></h1>
+                    <hr />
+                  </div>
+              </div> 
+        <div class="main-loginSignup main-center">
+          <form name = 'creditcard' class="form-horizontal" method="post" action="/creditcard">
+            
+            <div class="form-group">
+              <label for="cardNumber" class="cols-sm-2 control-label">Card Number</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-credit-card fa" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="cardNumber" id="cardNumber"  placeholder="Credit Card Number"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="expDate" class="cols-sm-2 control-label">Expiration Date</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-credit-card fa" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="expDate" id="expDate"  placeholder="Expiration Date"/>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="securityCode" class="cols-sm-2 control-label">Security Code</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-credit-card fa" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="securityCode" id="securityCode"  placeholder="Security Code"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="nameOnCard" class="cols-sm-2 control-label">Name on Card</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-credit-card fa" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="nameOnCard" id="nameOnCard"  placeholder="Name on Card"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <button type="submit" class="btn btn-primary btn-lg btn-block loginSignup-button">Add Payment Method</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+</body>

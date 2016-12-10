@@ -1,49 +1,3 @@
-<!-- <header class="intro-header" >
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>Sign Up</h1>
-          <hr class="small">
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      {{#each error}}
-        <div class="alert alert-danger">{{this}}</div>
-      {{/each}}
-      <form name="signup" action="/signup" method="post">
-        <div class="row control-group">
-          <div class="form-group col-xs-12 floating-label-form-group controls">
-            <label>Email Address</label>
-            <input type="username" class="form-control" placeholder="Username" name="username" required data-validation-required-message="Please enter your username.">
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>
-        <div class="row control-group">
-          <div class="form-group col-xs-12 floating-label-form-group controls">
-            <label>Password</label>
-            <input type="password" class="form-control" placeholder="Password" name="password" required data-validation-required-message="Please enter your password.">
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="form-group col-xs-12">
-              <button type="submit" class="btn btn-default">Sign Up</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
- -->
-
 
  <body id="loginSignupPage">
 <div class="container">
@@ -55,7 +9,7 @@
                   </div>
               </div> 
         <div class="main-loginSignup main-center">
-          <form class="form-horizontal" method="post" action="#">
+          <form name = 'signup' class="form-horizontal" method="post" action="/signup">
             
             <div class="form-group">
               <label for="firstname" class="cols-sm-2 control-label">First Name</label>
@@ -79,11 +33,11 @@
 
 
             <div class="form-group">
-              <label for="address" class="cols-sm-2 control-label">Address</label>
+              <label for="street" class="cols-sm-2 control-label">Street</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-subway fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="address" id="address"  placeholder="Address"/>
+                  <input type="text" class="form-control" name="street" id="street"  placeholder="Street"/>
                 </div>
               </div>
             </div>
@@ -140,7 +94,7 @@
 
 
             <div class="form-group ">
-              <button type="button" class="btn btn-primary btn-lg btn-block loginSignup-button">Signup</button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block loginSignup-button">Signup</button>
             </div>
             <div class="loginSignup-register">
                     <p>Already a member? <a href="/login"> Login</a>
