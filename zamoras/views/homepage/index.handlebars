@@ -17,8 +17,19 @@
 <div class="container">
   <ul class="nav navbar-nav navbar-right">
     <li class = "startShopping"><a href="/shoppingpage"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Start Shopping</a></li>
-    <li class = "login"><a href="/login" ><span class="glyphicon glyphicon-user login" aria-hidden="true"></span>Login</a></li>
-    <li class = "signUp"><a href="/signup"><span class="glyphicon glyphicon-user signUp" aria-hidden="true"></span>Signup</a></li>
+
+    {{#if user}}
+
+           <li class = "signOut"><a href="/logout" ><span class="glyphicon glyphicon-user login" aria-hidden="true"></span>Sign out: {{name}}</a></li>
+           
+    
+    {{else}}
+           <li class = "login"><a href="/login" ><span class="glyphicon glyphicon-user login" aria-hidden="true"></span>Login</a></li>
+           <li class = "signUp"><a href="/signup"><span class="glyphicon glyphicon-user signUp" aria-hidden="true"></span>Signup</a></li>
+     {{/if}} 
+   
+    
+
   </ul>
 </div>
 </nav>

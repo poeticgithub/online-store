@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkout</title>
+</head>
+<body id="checkoutpage">
+
+	<div class="logo">
+<figure>
+  <p class="logoName">Zamora's</p>
+  <figcaption>Retail and Clothing</figcaption>
+</figure>
+</div>
+
+<div class="centercheckout">
+	<div class="column">
+ 		<div class="step" id="step5">
+			<div class="title">
+				<h1>Finalize Order</h1>
+			</div>
+		</div>
+		<div class="content" id="final_products">
+			<div class="left" id="ordered">
+
+			{{#each items}}
+				<div class="products">
+					<div class="product_image">
+						<img src="{{this.imgsrc}}"/>
+					</div>
+					<div class="product_details">
+						<span class="product_name">{{this.ProductName}}</span>
+						<span class="quantity">{{this.quantity}} </span>
+						<span class="price"> {{this.subtotal}} </span>
+					</div>
+				</div>
+			{{/each}}
+				
+				<div class="totals">
+					<span class="subtitle">Subtotal<span id="sub_price">${{total}}</span></span>
+					<span class="subtitle">Tax (8.875%)<span id="sub_tax">${{tax}}</span></span>
+					<span class="subtitle">Shipping <span id="sub_ship">$5.00</span></span>
+				</div>
+				<div class="final">
+					<span class="title">Total <span id="calculated_total">${{totalTax}}</span></span>
+				</div>
+			</div>	
+			<div class="right" id="reviewed">
+
+			{{#if userInfo}}
+				<div class="billing">
+					<span class="title">Billing:</span>
+					<div class="address_reviewed">
+						<span class="name">{{userInfo.FullName}}</span>
+						<span class="address">{{userInfo.Street}}</span>
+						<span class="location">{{userInfo.Location}}</span>
+						{{!-- <span class="phone">(123)867-5309</span> --}}
+					</div>
+				</div>
+			
+				<div class="shipping">
+					<span class="title">Shipping:</span>
+					<div class="address_reviewed">
+						<span class="name">{{userInfo.FullName}}</span><br>
+						<span class="address">{{userInfo.Street}}</span><br>
+						<span class="location">{{userInfo.Location}}</span>
+						{{!-- <span class="phone">(123)867-5309</span> --}}
+					</div>
+				</div>
+			
+				<div class="payment">
+					<span class="title">Payment:</span>
+					<div class="payment_reviewed">
+						<span class="method">Credit Card</span>
+						<span class="number_hidden">{{userInfo.Card}}</span>
+					</div>
+				</div>
+			{{/if}}
+				<div id="complete">
+				 <form class="form-inline" action="/checkout" method="post">
+					<button type = "submit" class="big_button" id="complete" >Place Order</button>
+				 </form>
+
+				<a class = "button" id = "cancel" href = "/shoppingcart">Go Back</a>
+				<span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span> 
+			</div>				
+		</div>
+	</div>
+</div>
+</div>
+
+
+</body>
+</html>

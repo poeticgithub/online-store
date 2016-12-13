@@ -8,7 +8,18 @@ var db = require('../db');
 
 // define the creditcard route
 router.get('/', function(req, res) {
-  return res.render('creditcard');
+	if(req.authentication.user)
+	{
+		console.log('Carried over userID: ' + req.authentication.user);
+		return res.render('creditcard');
+	}
+
+	else
+	{
+	  res.send('Oops! Something went wrong, please return back.');
+	  
+	}
+
   });
 
 router.post('/', function(req,res) {
@@ -28,13 +39,28 @@ var connection = mysql.createConnection({
 		var securityCode = req.body.securityCode;
 		var name = req.body.nameOnCard;
 
-		var customerId = db.getSession();
-		console.log(customerId);
+		//var customerId = db.getSession();
 
-		
-		//connection.query('Select * from customer where ')
+		var statement = 'insert into paymenttype (Card_number, ExpDate, SecurityCode, NameOnCard, Customer_id) values ( \'';
+		statement += cardNumber + '\',';
+		statement += '\'' + expDate + '\',';
+		statement += '\'' + securityCode + '\',';
+		statement += '\'' + name + '\',';
 
-connection.end();
+		statement += '\'' + req.authentication.user + '\');';
+		console.log(statement);
+
+		connection.query(statement);
+
+		connection.end();
+
+		req.authentication.user = req.authentication.userTemp;
+		req.authentication.cart = new Array();
+        req.authentication.count = 0;
+        req.authentication.quantity = new Array();
+
+
+		res.redirect('/shoppingpage');
 
 });
 

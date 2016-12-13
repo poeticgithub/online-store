@@ -49,7 +49,7 @@
       <div class="row main">
         <div class="panel-heading">
                  <div class="panel-title text-center">
-                    <h1 class="title"><a href="/">Zamora's</a></h1>
+                    <h1 class="title" id = "test"><a href="/">Zamora's</a></h1>
                     <hr />
                   </div>
               </div> 
@@ -82,6 +82,15 @@
             <div class="loginSignup-register">
                     <p>Not a member? <a href="/signup"> Signup</a>
                  </div>
+
+              {{#if anError}}
+                <script type="text/javascript">
+                    alert("Incorrect username and/or password");
+                </script>
+              {{/if}}
+
+              
+
           </form>
         </div>
       </div>

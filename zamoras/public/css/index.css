@@ -1,4 +1,3 @@
-
 #homepage {
 	background: url('/images/shoes_belt.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -19,6 +18,66 @@
 	font-size: 1.1em;
 }
 
+#homepage .logo {
+	bottom:0px;
+	position:fixed;
+	font-family: 'Ranga', cursive;
+	color:white;
+	margin-left: 70px;
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 0;
+	line-height: .7;
+}
+
+#homepage .logoName {
+	font-size:4.3em;
+	margin:0;
+}
+
+#homepage figcaption {
+	font-size: 1.1em;
+	float:right;
+}
+
+#checkoutpage figcaption {
+	font-size: 2.1em;
+	float:right;
+}
+/*#checkoutpage .subtitle{
+	padding-right: 20px;
+}
+*/
+/*#checkoutpage .subtitle #sub_price{
+	padding-right: 0px;
+}*/
+#checkoutpage {
+			background:#f1f2f3;
+			font-size:62.5%;
+			padding:15px;
+			font-family: 'Open Sans', sans-serif;
+}
+
+#checkoutpage img {
+			max-width: 100%;
+}
+
+#checkoutpage .logo {
+	position:fixed;
+	font-family: 'Ranga', cursive;
+	color:black;
+	margin-left: 70px;
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 0;
+	line-height: .7;
+}
+
+#checkoutpage .logoName {
+	font-size:10.3em;
+	margin:0;
+}
+
 #shoppingpage {
 /*	max-width: 900px;*/
 	/*font-family: 'Ranga', cursive;*/
@@ -36,6 +95,10 @@ background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, F
         
 }
 
+#shoppingCartPage #pictureImages{
+	height: 150px;
+	width: 150px;
+}
 #shoppingpage .shoppingcartText {
 	text-align: center;
 	font-size: 15px;
@@ -50,6 +113,10 @@ background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, F
 	max-width: 900px;
 }
 
+#shoppingpage .img-responsive{
+	height: 150px;
+	width: 150px;
+}
 #shoppingpage .navbar{
 	width:100%;
 	background-color: rgb(228,228,228);
@@ -91,6 +158,9 @@ background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, F
 	width: 150px;
 }
 
+#shoppingpage #dropdown-btn {
+	background: transparent;
+}
 #shoppingCartPage {
 
 
@@ -116,7 +186,7 @@ background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, F
 }
 
 #loginSignupPage hr{
-	width: 15%;
+	width: 10%;
 	color: #fff;
 }
 
@@ -131,9 +201,12 @@ input::-webkit-input-placeholder {
 }
 
 #loginSignupPage  h1.title { 
+	left: 30%;
 	font-size: 80px;
 	font-family: 'Ranga', cursive;
-	font-weight: 400; 
+	font-weight: 400;
+	text-align: center;
+	background-color: transparent;
 }
 
 #loginSignupPage .fa {
@@ -149,31 +222,12 @@ input::-webkit-input-placeholder {
 	bottom:0;
 }
 
-.logo {
-	bottom:0px;
-	position:fixed;
-	font-family: 'Ranga', cursive;
-	color:white;
-	margin-left: 70px;
-	margin-bottom: 30px;
-	text-align: center;
-	padding: 0;
-	line-height: .7;
-}
 
-.logoName {
-	font-size:4.3em;
-	margin:0;
-}
 
 .modal-header {
 	text-align: center;
 }
 
-figcaption {
-	font-size: 1.1em;
-	float:right;
-}
 
 .filter {
 	height:25px;
@@ -231,23 +285,6 @@ img:hover {
 .navbar-default .navbar-nav > li > a {
 	color:white;
 	font-size: 1.1em;
-}
-
-.logo {
-	bottom:0px;
-	position:fixed;
-	font-family: 'Ranga', cursive;
-	color:white;
-	margin-left: 70px;
-	margin-bottom: 30px;
-	text-align: center;
-	padding: 0;
-	line-height: .7;
-}
-
-.logoName {
-	font-size:4.3em;
-	margin:0;
 }
 
 .modal-header {
@@ -362,3 +399,207 @@ hr.style-eight:after {
 	font-size: 11px;
 	text-align: center;
 }
+
+.centercheckout {
+	height:100%;
+	background-color: red;
+}
+
+			.column{
+		  	width:30%;
+			border-radius:10px;
+			margin:0 auto;
+		}
+
+
+
+
+
+		.step {
+			width: 100%;
+			color: #80c0ff;
+			padding-left: 1%;
+			padding-top: 20px;
+			float: left;
+			position: relative;
+			background-color: #fff;
+			margin:0;
+		}
+		.step:after{
+			content:'';
+			width:100%;
+			height:3px;
+			background:#80c0ff;
+			position:absolute;
+			bottom:0;
+			right:0;
+			border-top-left-radius:10px;
+			border-bottom-left-radius:10px;
+		}
+		#checkoutpage .title{
+			float:left;
+			width:70%;
+			margin-left:3%;
+			font-size:1.2em;
+			font-weight:300;
+			margin-top:-5px;
+						background-color: #fff;
+		}
+		#checkoutpage .title h1{
+			font-weight:300;
+			text-align: center;
+			background-color: #fff;
+		}
+		.content{
+			padding:2em 2em;
+			width:100%;
+			margin:0 auto;
+			height:auto;
+			display:block;
+			float:left;
+			background-color: #fff;
+		}
+		.content label{
+			font-size:1.5em;
+		}
+		.content input{
+			width:100%;
+			padding:5px 10px;
+			border:1px solid #ccc;
+			border-radius:3px;
+			display:inline-block;
+			font-size: 2em;
+		}
+		.content button{
+			display:block;
+			float:none;
+			margin:5px auto;
+			background:#80c0ff;
+			width:200px;
+			border:0;
+			padding:5px 15px;
+			font-size:1.6em;
+			color:#FFF;
+			border-bottom:3px solid #4da7ff;
+			border-radius:2px;
+			clear:both;
+		}
+			.products{
+			width:100%;
+			float:left;
+			padding-bottom:7px;
+			padding-top: 5px;
+			border-bottom:1px solid #aaa;
+		}
+		.products .product_image{
+			width:20%;
+			float:left;
+			margin-left: 10%;
+		}
+		.products .product_details{
+			width:70%;
+			display: table;
+			vertical-align: middle;
+		}
+		.products .product_details span{
+			display:table-cell;
+			vertical-align: middle;
+			margin-top:30%;
+			font-size: 1.5em;
+			color:#aaa;
+		}
+		.totals{
+			width:100%;
+			float:left;
+			border-bottom:3px solid #aaa;
+			padding-bottom:5px;
+		}
+		.totals .subtitle{
+			font-size:2em;
+			display:block;
+			text-align: right;
+			color:#aaa;
+			width:95%;
+			margin-right:5%;
+		}
+		.totals .subtitle .sub_price{
+			font-style:italic;
+			width:100px;
+		}
+		.final{
+			width:100%;
+			float:left;
+			font-size:2.2em;
+			text-align: right;
+			color:#888;
+		}
+		.final .title{
+			width:95%;
+			margin-right:5%;
+			font-weight:bold;
+			margin-top:5px;
+		}
+		#reviewed {
+			font-size: 10px;
+		}
+		#reviewed .title{
+			width:49%;
+			font-size:1.8em;
+			float:left;
+		}
+		#reviewed .billing{
+			width:100%;
+			float:left;
+			margin-bottom:5px;
+			margin-top:20px;
+		}
+		#reviewed .billing .address_reviewed,
+		#reviewed .shipping .address_reviewed,
+		#reviewed .payment .payment_reviewed{
+			color:#aaa;
+			font-size:1.2em;
+			height:80px;
+			width:48%;
+			float:left;
+		}
+		#reviewed .billing .address_reviewed span{
+			display:block;
+		}
+		span.method{
+			display:block;
+		}
+		#reviewed #complete{
+			float:left;
+			width:100%;
+			padding-top:5px;
+			border-top:1px dotted #aaa;
+		}
+		#reviewed .big_button{
+			clear:both;
+			display:block;
+			width:70%;
+			margin:0 auto;
+			padding-top:15px;
+			padding-bottom:10px;
+			color:#fff;
+			font-size:2em;
+			text-decoration: none;
+			background:#80c0ff;
+			text-align:center;
+			border-bottom: 3px solid #4da7ff;
+			border-radius: 2px;
+			margin-bottom:20px;
+			margin-top:20px;
+		}
+		#reviewed #complete .sub{
+			color:#aaa;
+			display:block;
+			text-align:center;
+			margin-top:15px;
+			width:80%;
+			margin:5px auto;
+		}
+	.left{
+			width:100%;
+			float:left;
+		}
