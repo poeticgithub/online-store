@@ -43,16 +43,23 @@ router.post('/', function(req,res) {
 		statement += '\'' + password + '\');';
 		console.log(statement);   
 
+		req.authentication.userTemp = username;
+		req.authentication.fullName = firstName + ' ' + lastName;
+
 		connection.query(statement);
 
 		connection.query('Select Customer_id from customer where username = \'' + username + '\'', function(err, rows, fields){
 
-					db.setSession(rows[0].Customer_id);
-					console.log(rows[0].Customer_id);
+
+					//db.setSession(rows[0].Customer_id);
+					req.authentication.user = rows[0].Customer_id;
+					console.log(req.authentication.user); 
+					res.redirect('/creditcard');
+					//console.log(rows[0].Customer_id);
 		});
  
 
-		res.redirect('/creditcard');
+		
 
 
 });

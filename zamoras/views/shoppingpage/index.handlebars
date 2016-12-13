@@ -10,6 +10,19 @@
 </head>
 <body id="shoppingpage">
 
+{{#if alreadyLoggedIn}}
+                <script type="text/javascript">
+                    alert("You already logged in! \nRedirecting to our shopping page.");
+                </script>
+{{/if}}
+
+{{#if noMatch}}
+       <script type="text/javascript">
+                    alert("Sorry, no matches found.");
+                </script>
+{{/if}}
+
+
 <div class="centerdiv">
 
 {{!-- <nav class="navbar navbar-light bg-faded">
@@ -49,60 +62,57 @@
 <nav class="navbar navbar-light bg-faded navbar-fixed-top">
   <a class="navbar-brand" href="/">Zamora's</a>
   <ul class="nav navbar-nav">
- 
-   
-
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown" name = "search">
       <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mens</a>
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-         {{!--
-           <a class="dropdown-item" ><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/t-shirt-26.png" title="T-Shirt" width="15"><span class="menuText">Shirts</span></a>
-           <a class="dropdown-item" href="#"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/trousers-26.png" title="Trousers" width="15"><span class="menuText">Pants</span></a>
-           <a class="dropdown-item" href="#"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/trainers_filled-25.png" title="Trainers Filled" width="15"><span class="menuText">Shoes</span></a>--}}
-       <form action="/shoppingpage" method="post">
-        <select name="search" onchange="this.form.submit()">
-          <option value="">Please select from options below</option>
-          <option value="Shirt">Shirt</option> 
-          <option value="Pants">Pants</option> 
-          <option value="Shoes">Shoes</option>
-        </select>
+
+        {{!-- <a class="dropdown-item" href="/shoppingpage/menshirt"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/t-shirt-26.png" title="T-Shirt" width="15"><span class="menuText">Shirts</span></a>
+
+        <a class="dropdown-item" href="#" ><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/trousers-26.png" title="Trousers" width="15"><span class="menuText" onclick= = "this.form.submit()" value = "Pants" >Pants</span></a>
+
+        <a class="dropdown-item" href="/menshoes"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/trainers_filled-25.png" title="Trainers Filled" width="15"><span class="menuText">Shoes</span></a> --}}
+
+        <form action="/shoppingpage/menssearch" method="post">
+           
+        <button id = "dropdown-btn" class="btn" name = "search" value = "shirt" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/t-shirt-26.png" title="T-Shirt" width="15"><span class="menuText">Shirts</span></button>
+
+        <button id = "dropdown-btn" class="btn" name = "search" value = "pants" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/trousers-26.png" title="Trousers" width="15"><span class="menuText">Pants</span></button>
+
+        <button id = "dropdown-btn" class="btn" name = "search" value = "shoes" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/trainers_filled-25.png" title="Women Shoe Side View Filled" width="15"><span class="menuText">Shoes</span></button>
+
         </form>
       </div>
-     </li>
-   
+    </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Womens</a>
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-       {{!--
-        <a class="dropdown-item" href="#"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/t-shirt-26.png" title="T-Shirt" width="15"><span class="menuText">Shirts</span></a>
-        <a class="dropdown-item" href="#"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/trousers-26.png" title="Trousers" width="15"><span class="menuText">Pants</span></a>
-        <a class="dropdown-item" href="#"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/women_shoe_side_view_filled-25.png" title="Women Shoe Side View Filled" width="15"><span class="menuText">Shoes</span></a>--}}
-        <form action="/shoppingpage" method="post">
-         <select name="search" onchange="this.form.submit()">
-          <option value="">Please select from options below</option>
-          <option value="Shirt">Shirt</option> 
-          <option value="Pants">Pants</option> 
-          <option value="Shoes">Shoes</option>
-         </select>
-        </form>
+
+      <form class = "form-inline" action = "/shoppingpage/womenssearch" method = "post" >
+
+        <button id = "dropdown-btn" class="btn" name = "search" value = "shirt" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/t-shirt-26.png" title="T-Shirt" width="15"><span class="menuText">Shirts</span></button>
+
+        <button id = "dropdown-btn" class="btn" name = "search" value = "pants" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Clothing/trousers-26.png" title="Trousers" width="15"><span class="menuText">Pants</span></button>
+
+        <button id = "dropdown-btn" class="btn" name = "search" value = "shoes" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/women_shoe_side_view_filled-25.png" title="Women Shoe Side View Filled" width="15"><span class="menuText">Shoes</span></button>
+
+      </form>  
       </div>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Unisex</a>
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-      {{!--
-        <a class="dropdown-item" href="#"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/glasses_filled-25.png" title="Glasses Filled" width="15"><span class="menuText">Glasses</span></a>
-        <a class="dropdown-item" href="#"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/scarf_filled-25.png" title="Scarf Filled" width="15"><span class="menuText">Scarves</span></a>
-        <a class="dropdown-item" href="#"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Holidays/santas_hat_filled-25.png" title="Santas Hat Filled" width="15"><span class="menuText">Hats</span></a> --}}
-        <form action="/shoppingpage" method="post">
-         <select name="search" onchange="this.form.submit()">
-          <option value="">Please select from options below</option>
-          <option value="Glasses">Glasses</option> 
-          <option value="Scarves">Scarves</option> 
-          <option value="Hats">Hats</option>
-         </select>
-        </form>
+      
+      <form class = "form-inline" action = "/shoppingpage/unisearch" method = "post" >
+
+        <button id = "dropdown-btn" class="btn" name = "search" value = "glasses" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/glasses_filled-25.png" title="Glasses Filled" width="15"><span class="menuText">Glasses</span></button>
+
+        <button id = "dropdown-btn" class="btn" name = "search" value = "scarves" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Clothing/scarf_filled-25.png" title="Scarf Filled" width="15"><span class="menuText">Scarves</span></button>
+
+        <button id = "dropdown-btn" class="btn" name = "search" value = "hat" onchange = "this.form.submit()"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Holidays/santas_hat_filled-25.png" title="Santas Hat Filled" width="15"><span class="menuText">Hats</span></button>
+      
+      </form>
       </div>
+
     </li>
   </ul>
   <form class="form-inline" action="/shoppingpage" method="post"> 
@@ -119,12 +129,19 @@
 <div class="container items">
 
         <div class="row">
+          {{#if cartCount}}
+            <div class="col-lg-12">
+                <h1 class="page-header">Our Clothing<span class="float-right shoppingcartText"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><a href="/shoppingcart">Shopping Cart({{cartCount}})</a></span></h1>
+
+            </div>
+          {{else}}
 
             <div class="col-lg-12">
-                <h1 class="page-header">Mens Clothes<span class="float-right shoppingcartText"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><a href="/shoppingcart">Shopping Cart(0)</a></span></h1>
+                <h1 class="page-header">Our Clothing<span class="float-right shoppingcartText"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><a href="/shoppingcart">Shopping Cart(0)</a></span></h1>
 
             </div>
 
+            {{/if}}
           {{!--   {{#if send}}
                   <div class="col-lg-3 col-md-4 col-xs-6 thumb" id = "render_here">
                       <a class="thumbnail" href="#">
@@ -136,78 +153,28 @@
  
             {{/if}} --}}
 
+            {{#if rows}}
                 {{#each rows}}
                   <div class="col-lg-3 col-md-4 col-xs-6 thumb" id = "searchPictures">
-                      <a class="thumbnail" href="#">
+                      <a class="thumbnail" href = "#" name = "addProduct">
                          <img class="img-responsive" src = "/{{this.imgsrc}}" alt = {{picturesArr}}></img>
-                          <p class="image-text">{{this.ProductName}} ---- {{this.Cost}}</p>
+                          <p class="image-text">{{this.ProductName}} ------- {{this.Cost}}</p>
+                          <form class="form-inline" action="/shoppingpage/cart" method="post"> 
+                          <button class = "btn btn-outline-success" name = "cart" value = "{{this.Product_id}}" type="submit" >Add to Cart </button>
+                          </form>
                       </a>
                   </div> 
                 {{/each}}
 
+                {{else}}
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb" id = "render_here">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src= "images/shoes_belt.jpg" alt="">
+                            <p class="image-text">Product Name ---- $1.99</p>
+                        </a>
+                   </div>
+            {{/if}}
 
-
-            {{!-- <script id="first-template" type="text/x-handlebars-template"></script> --}}
-        {{!--     <div class="col-lg-3 col-md-4 col-xs-6 thumb" id = "render_here">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src= "images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div> --}}
-{{!--             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div> --}}
-{{!--             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/shoes_belt.jpg" alt="">
-                    <p class="image-text">Product Name ---- $1.99</p>
-                </a>
-            </div> --}}
         </div>
 
 
