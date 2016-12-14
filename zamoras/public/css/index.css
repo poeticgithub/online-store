@@ -527,17 +527,20 @@ hr.style-eight:after {
 			width:100px;
 		}
 		.final{
-			width:100%;
-			float:left;
+			width:40%;
+			float:right;
 			font-size:2.2em;
 			text-align: right;
 			color:#888;
+			background: transparent;
 		}
 		.final .title{
 			width:95%;
 			margin-right:5%;
 			font-weight:bold;
 			margin-top:5px;
+			padding-top:25px;
+			background: transparent;
 		}
 		#reviewed {
 			font-size: 10px;

@@ -3,6 +3,8 @@ var router = express.Router();
 var path = require('path');
 var mysql = require('mysql');
 var db = require('../db');
+//var bcrypt = require('bcrypt');
+
 
 
 
@@ -40,6 +42,10 @@ router.post('/', function(req,res) {
 		statement += '\'' + street + '\',';
 		statement += '\'' + zipcode + '\',';
 		statement += '\'' + username + '\',';
+		//bcrypt.hash(password, 10, function(err, bcrpytedPassword) {
+			
+        //});
+       // console.log(password);
 		statement += '\'' + password + '\');';
 		console.log(statement);   
 
