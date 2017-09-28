@@ -4,17 +4,18 @@ Project to gain experience with working on a team in order to develop an applica
 
 # Documentation
 
-[Req] (zamoras/docs/Zamoras Requirements Document.doc)
+[Requirements](docs/Requirements_Document.doc)
 
-[Design](zamoras/docs/Zamoras Design Document.doc)
+[Design](docs/Design_Document.doc)
 
-[Test Scripts](zamoras/docs/System-UAT-for Zamoras Retail Store.doc)
+[Test Scripts](docs/Test_Scripts.doc)
 
 
 ## Built With
 
-[Tech Stack](docs/Zamoras Retail Store.pptx)
+Backend: Node.js, Express, MySQL
 
+FrontEnd: Html, CSS, Javascript, Handlebars Templating Engine
 
 # Demo
 ![demo1](https://user-images.githubusercontent.com/18449651/30940676-cfbf1c40-a3af-11e7-9ca3-26552e2245c3.gif)
