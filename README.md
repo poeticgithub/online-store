@@ -1,6 +1,6 @@
 # Motivation
 
-Project to gain experience with working on a team in order to develop an application from initial conception while adhering to a strict deadline.
+To gain experience with working on a team in order to develop an application from initial conception while adhering to a strict deadline.
 
 # Documentation
 
