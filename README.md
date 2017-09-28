@@ -4,7 +4,7 @@ Project to gain experience with working on a team in order to develop an applica
 
 # Documentation
 
-[Req] (docs/Zamoras Requirements Document.doc)
+[Req] (zamoras/docs/Zamoras Requirements Document.doc)
 
 [Design](zamoras/docs/Zamoras Design Document.doc)
 
