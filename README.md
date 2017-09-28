@@ -15,7 +15,7 @@ Project to gain experience with working on a team in order to develop an applica
 
 Backend: Node.js, Express, MySQL
 
-FrontEnd: Html, CSS, Javascript, Handlebars Templating Engine
+FrontEnd: Html, CSS, JavaScript, Handlebars Templating Engine
 
 # Demo
 ![demo1](https://user-images.githubusercontent.com/18449651/30940676-cfbf1c40-a3af-11e7-9ca3-26552e2245c3.gif)
