@@ -4,11 +4,11 @@ Project to gain experience with working on a team in order to develop an applica
 
 # Documentation
 
-[Requirements](docs/Requirements_Document.doc)
+[Requirements](zamoras/docs/Requirements_Document.doc)
 
-[Design](docs/Design_Document.doc)
+[Design](zamoras/docs/Design_Document.doc)
 
-[Test Scripts](docs/Test_Scripts.doc)
+[Test Scripts](zamoras/docs/Test_Scripts.doc)
 
 
 ## Built With
